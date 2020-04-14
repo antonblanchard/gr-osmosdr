@@ -100,7 +100,7 @@ int soapy_source_c::work( int noutput_items,
         _stream, &output_items[0],
         noutput_items, flags, timeNs);
 
-    if (ret < 0) return 0; //call again
+    if (ret < 0) return noutput_items; //call again
     return ret;
 }
 
